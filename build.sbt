@@ -10,7 +10,7 @@ scalateSettings
 
 organization := "com.ru.waka"
 
-name := "hoge"
+name := "scalatra getting started"
 
 version := "0.1.0-SNAPSHOT"
 
