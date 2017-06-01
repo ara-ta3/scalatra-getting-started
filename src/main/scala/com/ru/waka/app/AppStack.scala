@@ -7,7 +7,7 @@ import org.fusesource.scalate.layout.DefaultLayoutStrategy
 import javax.servlet.http.HttpServletRequest
 import collection.mutable
 
-trait HogeStack extends ScalatraServlet with ScalateSupport {
+trait AppStack extends ScalatraServlet with ScalateSupport {
 
   notFound {
     // remove content type in case it was set through an action
