@@ -2,7 +2,7 @@ version: '2'
 
 services:
     application:
-        image: tomcat:8.0
+        build: ./amazonlinux
         environment:
             - TZ=Asia/Tokyo
         ports: 
@@ -10,7 +10,7 @@ services:
         links: 
             - database:database
         volumes:
-            - $PWD/../builds:/usr/local/tomcat/webapps/
+            - $PWD/../builds:/var/lib/tomcat8/webapps/
     database:
         image: mysql:5.6
         environment:
