@@ -2,15 +2,15 @@ SBT=./sbt
 DOCKER=$(shell which docker)
 docker_tag_name=scalatra_getting_started
 
-server:
+server/local:
 	$(SBT) ~jetty:start
 
-package:
+server: package
+	cd docker && $(MAKE) server
+
+package: clean
 	$(SBT) package
+	cp -f target/scala-2.11/scalatra_getting_started_2.11-0.1.0-SNAPSHOT.war ./builds/ROOT.war
 
-docker/build:
-	$(DOCKER) build . -t $(docker_tag_name)
-
-docker/run: docker/build
-	$(DOCKER) run $(docker_tag_name)
-
+clean:
+	rm -rf builds/*
