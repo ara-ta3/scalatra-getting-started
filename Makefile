@@ -8,6 +8,9 @@ server/local:
 server: package
 	cd docker && $(MAKE) server
 
-package:
-	$(SBT) assembly
-	cp -f target/scala-2.11/scalatra_getting_started-assembly-0.1.0-SNAPSHOT.jar ./builds/ROOT.war
+package: clean
+	$(SBT) package
+	cp -f target/scala-2.11/scalatra_getting_started_2.11-0.1.0-SNAPSHOT.war ./builds/ROOT.war
+
+clean:
+	rm -rf builds/*
