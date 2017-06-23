@@ -1,8 +1,18 @@
 version: '2'
 
 services:
-    application:
+    application_amzn_linux:
         build: ./amazonlinux
+        environment:
+            - TZ=Asia/Tokyo
+        ports: 
+            - "8081:8080"
+        links: 
+            - database:database
+        volumes:
+            - $PWD/../builds:/var/lib/tomcat8/webapps/
+    application_ubuntu:
+        build: ./ubuntu
         environment:
             - TZ=Asia/Tokyo
         ports: 

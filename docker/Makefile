@@ -1,9 +1,12 @@
 DOCKER_COMPOSE=$(shell which docker-compose)
 DOCKER=$(shell which docker)
+conf=
 
-server:docker-compose/up
+server:
+	$(MAKE) docker-compose/up
 
-server/clean: docker-compose/clean
+server/clean: 
+	$(MAKE) docker-compose/clean
 
 docker-compose/build:
 	$(DOCKER_COMPOSE) build
