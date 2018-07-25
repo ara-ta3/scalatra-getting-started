@@ -16,7 +16,4 @@
   <listener>
       <listener-class>org.scalatra.servlet.ScalatraListener</listener-class>
   </listener>
-  <error-page>
-      <location>/index.jsp</location>
-  </error-page>
 </web-app>
