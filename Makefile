@@ -1,4 +1,4 @@
-SBT=sbt
+SBT=./sbt
 DOCKER=$(shell which docker)
 docker_tag_name=scalatra_getting_started
 
