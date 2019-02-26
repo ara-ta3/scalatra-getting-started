@@ -1,4 +1,4 @@
-package com.ru.waka.app
+package com.ru.waka.app.controllers
 
 import org.json4s.{DefaultFormats, Formats}
 

@@ -1,7 +1,7 @@
 package com.ru.waka.app
 
+import com.ru.waka.app.controllers.App
 import javax.servlet.ServletContext
-
 import org.scalatra._
 
 class ScalatraBootstrap extends LifeCycle {
