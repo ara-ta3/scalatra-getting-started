@@ -2,7 +2,7 @@ package com.ru.waka.app.controllers
 
 import org.json4s.{DefaultFormats, Formats}
 
-class App extends AppStack {
+class TopController extends BaseController {
   protected implicit val jsonFormats: Formats = DefaultFormats.withBigDecimal
 
   get("/") {
@@ -10,10 +10,10 @@ class App extends AppStack {
   }
 
   get("/json") {
-    App.Hoge("aaa")
+    TopController.Hoge("aaa")
   }
 }
 
-object App {
+object TopController {
   case class Hoge(a: String)
 }
