@@ -1,6 +1,6 @@
 package com.ru.waka.app
 
-import com.ru.waka.app.controllers.App
+import com.ru.waka.app.controllers.TopController
 import org.scalatra.test.specs2._
 
 // For more on Specs2, see http://etorreborre.github.com/specs2/guide/org.specs2.guide.QuickStart.html
@@ -9,7 +9,7 @@ class AppSpec extends ScalatraSpec { def is =
     "should return status 200"                  ! root200^
                                                 end
 
-  addServlet(classOf[App], "/*")
+  addServlet(classOf[TopController], "/*")
 
   def root200 = get("/") {
     status must_== 200
