@@ -1,4 +1,4 @@
-val ScalatraVersion = "2.6.5"
+val ScalatraVersion = "2.7.0"
 
 organization := "com.ru.waka"
 
@@ -12,8 +12,8 @@ libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra" % ScalatraVersion,
   "org.scalatra" %% "scalatra-json" % ScalatraVersion,
   "org.scalatra" %% "scalatra-swagger" % ScalatraVersion,
-  "org.json4s"   %% "json4s-jackson" % "3.5.2",
-  "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
+  "org.json4s"   %% "json4s-jackson" % "3.6.9",
+  "javax.servlet" % "javax.servlet-api" % "4.0.1" % "provided"
 )
 
 enablePlugins(JettyPlugin)
